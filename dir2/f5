@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "Select your option"
+echo "1.Create a user"
+echo "2.List the users"
+echo "3.Delete a user"
+read option
+case $option in
+"1") read -p "Enter the username to be created: " user
+     sudo useradd $user
+     echo "Successfully created the user"
+;;
+"2") cat /etc/passwd
+;;
+"3") read -p "Enter the username to be deleted: " delete
+     sudo userdel -r $delete
+     echo "Successfully deleted the user"
+;;
+*) echo "Invalid option"
+;;
+esac
+
