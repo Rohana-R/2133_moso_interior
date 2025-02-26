@@ -1,0 +1,17 @@
+#!/bin/bash
+read -p "enter salary: " sal
+if [ $sal -le 15000 ]
+then
+echo "No Tax"
+elif [ $sal -ge 16000 -a $sal -le 30000 ]
+then
+echo "5% Tax"
+elif [ $sal -ge 31000 -a $sal -le 60000 ]
+then
+echo "10% Tax"
+elif [ $sal -gt 60000 ]
+then
+echo "20% Tax"
+else
+echo "The given condition is not true"
+fi
