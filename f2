@@ -1,12 +1,18 @@
 #!/bin/bash
 echo "1.Enter the vowel letter in lower case"
-echo "2.List the vowel letters in lower case"
+echo "2.Enter the vowel letters in upper case"
+echo "3.List the vowel letters in lower case"
+echo "4.List the vowel letters in upper case"
 echo "3.Select your option"
 read option
 case $option in
 "1") read -p "enter the vowel letters in lower case"
      if [ $a == a -a $a == e -a $a == i -a $a == o -a $a == u ]
      echo "Successfully entered the vowel letters in lower case"
+;;
+"2") read -p "enter the vowel letters in upper case"
+     if [ $a == A -a $a == E -a $a == I -a $a == O -a $a == U ]
+     echo "Successfully entered the vowel letters in upper case"
 ;;
 "2") read -p "List the vowel letters in lower case"
 ;;
